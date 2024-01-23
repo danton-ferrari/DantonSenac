@@ -1,9 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-  </head>
-  <body></body>
+</head>
+<body>
+ Danton Ferrari
+<script>
+
+while (true) {
+    let nome = prompt('Qual o seu nome?');
+    let variavel = nome+' você está indo para casa de um amigo, mas precisa ir ao banheiro\no que faze?\na - voltar para casa\nb - seguir em frente\nc - procurar um estabelecimento'
+    let decisao = prompt(variavel);
+
+
+    if (decisao == "a"){
+        console.log(nome,'. Você mora a 30min de carro e, está a pé. Cagou-se...');
+        let decisao = prompt('Deseja continuar a jogar? (s/n)');
+        if (decisao == "n"){
+            break
+        }
+    }
+
+    else if (decisao == "b"){
+        console.log(nome,". Você entupiu o vaso do seu amigo.");
+        let decisao = prompt('Deseja continuar a jogar? (s/n)');
+        if (decisao == "n"){
+            break
+        }
+    }
+
+    else if (decisao == "c"){
+        console.log(nome,". Você não achou nada aberto, pois é feriado.");
+        let decisao = prompt('Deseja continuar a jogar? (s/n)');
+        if (decisao == "n"){
+            break
+        }
+    }
+
+    else {
+        console.log(nome,", valor invalido, digite novamente.");
+    }
+}
+</script>
+</body>
 </html>
