@@ -9,7 +9,13 @@ while (sim == "s"){
         console.log(x)
         let y = Number(prompt("Digite mais um número inteiro:"))
         console.log(y)
-        console.log(x + y)
+        if (x > 0 && y > 0){
+            console.log(x+" + "+y+" =",x + y)
+            sim = prompt("Deseja continuar? (s/n)")
+        }
+        else {
+            console.log("Digite um numero maior que \"0\"!\nTente novamente.")
+        }
     }
 
     else if (operacao == "-"){
@@ -17,7 +23,13 @@ while (sim == "s"){
         console.log(x)
         let y = Number(prompt("Digite mais um número inteiro:"))
         console.log(y)
-        console.log(x - y)
+        if (x > 0 && y > 0){
+            console.log(x+" - "+y+" =",x - y)
+            sim = prompt("Deseja continuar? (s/n)")
+        }
+        else {
+            console.log("Digite um numero maior que \"0\"!\nTente novamente.")
+        }
     }
 
     else if (operacao == "/"){
@@ -25,7 +37,13 @@ while (sim == "s"){
         console.log(x)
         let y = Number(prompt("Digite mais um número inteiro:"))
         console.log(y)
-        console.log(x / y)
+        if (x > 0 && y > 0){
+            console.log(x+" / "+y+" =",x / y)
+            sim = prompt("Deseja continuar? (s/n)")
+        }
+        else {
+            console.log("Digite um numero maior que \"0\"!\nTente novamente.")
+        }
     }
 
     else if (operacao == "*"){
@@ -33,11 +51,14 @@ while (sim == "s"){
         console.log(x)
         let y = Number(prompt("Digite mais um número inteiro:"))
         console.log(y)
-        console.log(x * y)
+        if (x > 0 && y > 0){
+            console.log(x+" * "+y+" =",x * y)
+            sim = prompt("Deseja continuar? (s/n)")
+        }
+        else {
+            console.log("Digite um numero maior que \"0\"!\nTente novamente.")
+        }
     }
-    
-    sim = prompt("Deseja continuar? (s/n)")
-
 }
 
-console.log("Acabou!")
+console.log("Obrigado por usar \"Calculadora Danton\".")
