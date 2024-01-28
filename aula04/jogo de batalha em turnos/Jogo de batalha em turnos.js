@@ -1,15 +1,29 @@
-let jogador_vida = 10;
-let inimigo_vida = 10;
-let recarregar_vida = 3;
-let df = 3;
-let rodadas = 0;
-let cdf = true;
-let cdf1 = false;
-let cdf2 = false;
+// ------------------------------ Start Functions ------------------------------ //
 
-function sorteador() {
+// --- Sorteador Easy --- //
+function sorteador_easy() {
+  numero_sorteado = Math.floor(Math.random() * 10 + 1);
+  if (numero_sorteado <= 8) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+// --- Sorteador Intermediary --- //
+function sorteador_intermediary() {
   numero_sorteado = Math.floor(Math.random() * 10 + 1);
   if (numero_sorteado <= 5) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+// --- Sorteador Hard --- //
+function sorteador_hard() {
+  numero_sorteado = Math.floor(Math.random() * 10 + 1);
+  if (numero_sorteado <= 3) {
     return true;
   } else {
     return false;
@@ -206,18 +220,66 @@ function menu02_cdf2() {
     `Vida do jogador: ${jogador_vida}\nVida do inimigo: ${inimigo_vida}`
   );
 }
+// ------------------------------ End Functions ------------------------------ //
 
-while (jogador_vida > 0 && inimigo_vida > 0) {
-  rodadas++;
-  var numero_sorteado = sorteador();
-  var start = confere_start();
-  var vida = confere_vida();
-  if (cdf) {
-    menu_cdf();
-  } else if (cdf1) {
-    menu_cdf1();
-  } else if (cdf2) {
-    menu_cdf2();
+let jogador_vida = 10;
+let inimigo_vida = 10;
+let recarregar_vida = 3;
+let df = 3;
+let rodadas = 0;
+let cdf = true;
+let cdf1 = false;
+let cdf2 = false;
+let nivel_partida = Number(prompt("Easy = 1\nIntermediary = 2\nHard = 3:"));
+
+// --- Easy --- //
+if (nivel_partida == 1) {
+  while (jogador_vida > 0 && inimigo_vida > 0) {
+    rodadas++;
+    var numero_sorteado = sorteador_easy();
+    var start = confere_start();
+    var vida = confere_vida();
+    if (cdf) {
+      menu_cdf();
+    } else if (cdf1) {
+      menu_cdf1();
+    } else if (cdf2) {
+      menu_cdf2();
+    }
+  }
+}
+
+// --- Intermediary --- //
+else if (nivel_partida == 2) {
+  while (jogador_vida > 0 && inimigo_vida > 0) {
+    rodadas++;
+    var numero_sorteado = sorteador_intermediary();
+    var start = confere_start();
+    var vida = confere_vida();
+    if (cdf) {
+      menu_cdf();
+    } else if (cdf1) {
+      menu_cdf1();
+    } else if (cdf2) {
+      menu_cdf2();
+    }
+  }
+}
+
+// --- Hard --- //
+else if (nivel_partida == 3) {
+  while (jogador_vida > 0 && inimigo_vida > 0) {
+    rodadas++;
+    var numero_sorteado = sorteador_hard();
+    var start = confere_start();
+    var vida = confere_vida();
+    if (cdf) {
+      menu_cdf();
+    } else if (cdf1) {
+      menu_cdf1();
+    } else if (cdf2) {
+      menu_cdf2();
+    }
   }
 }
 
