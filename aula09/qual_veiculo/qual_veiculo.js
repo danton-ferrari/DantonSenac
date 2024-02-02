@@ -18,16 +18,15 @@ let array = [
   ["van", 501, 2000, 2.5],
   ["caminhão", 2001, 10000, 3.5],
 ];
-
 let carga = Number(prompt("Qual a carga?"));
 let distancia = Number(prompt("Qual a distancia em Km?"));
 for (var i = 0; i < array.length; i++) {
   if (carga >= array[i][1] && carga <= array[i][2]) {
     var preco = carga * distancia * array[i][3];
     var desconto_acrescimo =
-      distancia <= 20000
+      distancia <= 20
         ? preco - preco * 0.15
-        : 20000 < distancia <= 120000
+        : 20 < distancia <= 120
         ? (desconto_acrescimo = preco)
         : desconto_acrescimo + desconto_acrescimo * 0.15;
     alert(
