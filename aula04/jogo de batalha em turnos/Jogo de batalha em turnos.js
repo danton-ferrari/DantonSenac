@@ -265,6 +265,7 @@ if (nivel_partida == 1) {
         rodadas = 0;
         cdf = true;
         df = 3;
+        recarregar_vida = 3;
         alert(`Experiencia do jogador é: ${experiencia}`);
       } else if (inimigo_vida > 0 && experiencia > 0) {
         experiencia--;
@@ -273,6 +274,7 @@ if (nivel_partida == 1) {
         rodadas = 0;
         cdf = true;
         df = 3;
+        recarregar_vida = 3;
         alert(`Experiencia do jogador é: ${experiencia}`);
       } else {
         alert("Você perdeu!");
@@ -314,6 +316,7 @@ else if (nivel_partida == 2) {
         rodadas = 0;
         cdf = true;
         df = 3;
+        recarregar_vida = 3;
         alert(`Experiencia do jogador é: ${experiencia}`);
       } else if (inimigo_vida > 0 && experiencia > 0) {
         experiencia--;
@@ -322,6 +325,7 @@ else if (nivel_partida == 2) {
         rodadas = 0;
         cdf = true;
         df = 3;
+        recarregar_vida = 3;
         alert(`Experiencia do jogador é: ${experiencia}`);
       } else {
         alert("Você perdeu!");
@@ -363,6 +367,7 @@ else if (nivel_partida == 3) {
         rodadas = 0;
         cdf = true;
         df = 3;
+        recarregar_vida = 3;
         alert(`Experiencia do jogador é: ${experiencia}`);
       } else if (inimigo_vida > 0 && experiencia > 0) {
         experiencia--;
@@ -371,6 +376,7 @@ else if (nivel_partida == 3) {
         rodadas = 0;
         cdf = true;
         df = 3;
+        recarregar_vida = 3;
         alert(`Experiencia do jogador é: ${experiencia}`);
       } else {
         alert("Você perdeu!");
