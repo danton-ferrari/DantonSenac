@@ -89,20 +89,33 @@ function eficiência_carro() {
 }
 // --- Eficiência Carro --- //
 
-while (true) {
+var continuar = true;
+
+while (continuar) {
   console.log(
     "1 -> Qual Veículo Usar\n2 -> Jogo da Forca\n3 -> Eficiência do Carro"
   );
   var oq_fazer = Number(prompt("Digite o que deseja fazer:"));
-  if (oq_fazer == 1) {
-    qual_veículo();
-  } else if (oq_fazer == 2) {
-    forca();
-  } else if (oq_fazer == 3) {
-    eficiência_carro();
-  } else if (oq_fazer == 4) {
-    break;
-  } else {
-    console.log("Você digitou incorretamente! tente novamente.");
+  switch (oq_fazer) {
+    case 1:
+      qual_veículo();
+      break;
+    case 2:
+      forca();
+      break;
+    case 3:
+      eficiência_carro();
+      break;
+    default:
+      console.log("Você digitou incorretamente! tente novamente.");
+      break;
+  }
+  continuar = prompt('Para continuar digite "c" e para sair digite "s":');
+  switch (continuar) {
+    case "s":
+      continuar = false;
+      break;
+    default:
+      break;
   }
 }
