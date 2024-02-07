@@ -6,7 +6,7 @@
 // ), e use o comando splice para apagar este, caso tenhamos um
 // mostrar, apenas escreva os valores em um alert. e caso modificar,
 // escreva o nome que quer ser alterado, o index dele e oque alterar
-contas[2].splice(0, 1);
+
 // --- Contas --- //
 let Contas = [
   ["Mario", "123", 99],
@@ -35,7 +35,8 @@ function adicionar(nome, senha) {
 function remover(Contas, nome) {
   for (var i = 0; i < Contas.length; i++) {
     if (Contas[i][0] == nome) {
-      return Contas[i].splice(0, 2);
+      Contas - Contas[i].splice(0, 2);
+      return Contas;
     }
   }
 }
@@ -68,9 +69,12 @@ while (continuar) {
       break;
 
     case 2:
-      if (encontrado != true) {
+      if (encontrado == true) {
         Contas = remover(Contas, nome);
+      } else {
+        console.log(`O nome ${nome} e/ou a senha ${senha} não existe(m).`);
       }
+      alert(Contas);
       break;
 
     case 3:
