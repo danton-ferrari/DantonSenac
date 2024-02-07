@@ -3,15 +3,26 @@
 // Para a tela 2 escreva uma função onde escreva na tela uma lista de
 // itens de supermercado, apenas o nome destes em um alert
 
-let opcao = prompt("Pergunta");
+function meu_nome() {
+  var nome = prompt("Digite seu nome:");
+  alert(`Olá ${nome} seja bem vindo!`);
+}
+
+function tela2() {
+  alert("Maçã\nLaranja\nUva\nCafé\nLeite\nPão");
+}
+
+let opcao = prompt("Qual o código?");
 switch (opcao) {
-  case "a":
-    alert("primeira opção");
+  case "123":
+    alert("Acessar tela 1.");
+    meu_nome();
     break;
-  case "b":
-    alert("segunda opção");
+  case "abcd":
+    alert("Acessar tela 2.");
+    tela2();
     break;
   default:
-    alert("nenhuma obtida");
+    alert("Tela inexistente.");
     break;
 }
