@@ -4,13 +4,13 @@
 
 let opcao = prompt("Pergunta");
 switch (opcao) {
-  case "a":
-    alert("primeira opção");
+  case "Marcelo":
+    alert("Aprovado!");
     break;
-  case "b":
-    alert("segunda opção");
+  case "Ana":
+    alert("Recuperação!");
     break;
   default:
-    alert("nenhuma obtida");
+    alert("Nome não registrado!");
     break;
 }
