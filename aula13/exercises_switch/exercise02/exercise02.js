@@ -3,15 +3,18 @@
 // alistar, caso 19 pergunte se ele não se atrasou no alistamento, do
 // contrário diga que não há nada para ser dito
 
-let opcao = prompt("Pergunta");
+let opcao = Number(prompt("Qual sua idade?"));
 switch (opcao) {
-  case "a":
-    alert("primeira opção");
+  case 18:
+    alert("Vai para o alistamento militar!");
     break;
-  case "b":
-    alert("segunda opção");
+  case 17:
+    alert("Se prepare que ano que vem você vai se alistar!");
+    break;
+  case 19:
+    alert("Se atrasou no alistamento?");
     break;
   default:
-    alert("nenhuma obtida");
+    alert("Não há nada para ser dito!");
     break;
 }
