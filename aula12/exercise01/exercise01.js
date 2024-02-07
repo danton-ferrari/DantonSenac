@@ -40,8 +40,53 @@ function remover(Contas, nome) {
     }
   }
 }
-function mostrar() {}
-function modificar() {}
+function mostrar(Contas) {
+  var mensagem = "";
+  for (var i = 0; i < Contas.length; i++) {
+    for (var j = 0; j < Contas[i].length; j++) {
+      mensagem += String(Contas[i][j]) + " ";
+    }
+    mensagem += "\n";
+  }
+  alert(mensagem);
+}
+function modificar(Contas, nome, senha) {
+  var opcao = Number(
+    prompt("O que deseja alterar?\n1 -> nome\n2 -> senha\n3 -> nome e senha.")
+  );
+  switch (opcao) {
+    case 1:
+      for (var i = 0; i < Contas.length; i++) {
+        if (Contas[i][0] == nome) {
+          Contas[i][0] = prompt("Digite o nome.");
+        }
+      }
+      break;
+    case 2:
+      for (let i = 0; i < Contas.length; i++) {
+        if (Contas[i][0] == nome) {
+          if (Contas[i][1] == senha) {
+            Contas[i][1] = prompt("Digite a senha.");
+          }
+        }
+      }
+      break;
+    case 3:
+      for (let i = 0; i < Contas.length; i++) {
+        if (Contas[i][0] == nome) {
+          Contas[i][0] = prompt("Digite o nome.");
+          if (Contas[i][1] == senha) {
+            Contas[i][1] = prompt("Digite a senha.");
+          }
+        }
+      }
+      break;
+    default:
+      alert("Número digitado incorretamente!");
+      break;
+  }
+  return Contas;
+}
 // --- Finish Functions --- //
 
 var continuar = true;
@@ -52,13 +97,15 @@ while (continuar) {
       "1 -> Adicionar nome a lista;\n2 -> Remover nome da lista;\n3 -> Mostrar nomes;\n4 -> Modificar nome."
     )
   );
-  let nome = prompt("Diga um nome");
-  let senha = prompt("Digite uma senha");
-  let encontrado = verificador(Contas, nome, senha);
-  console.log(encontrado);
+  let encontrado = "";
+  let senha = "";
+  let nome = "";
 
   switch (opcao) {
     case 1:
+      nome = prompt("Diga um nome");
+      senha = prompt("Digite uma senha");
+      encontrado = verificador(Contas, nome, senha);
       if (encontrado != true) {
         Contas.push(adicionar(nome, senha));
         console.log(Contas);
@@ -69,6 +116,9 @@ while (continuar) {
       break;
 
     case 2:
+      nome = prompt("Diga um nome");
+      senha = prompt("Digite uma senha");
+      encontrado = verificador(Contas, nome, senha);
       if (encontrado == true) {
         Contas = remover(Contas, nome);
       } else {
@@ -78,9 +128,16 @@ while (continuar) {
       break;
 
     case 3:
+      mostrar(Contas);
       break;
 
     case 4:
+      nome = prompt("Diga um nome");
+      senha = prompt("Digite uma senha");
+      encontrado = verificador(Contas, nome, senha);
+      if (encontrado == true) {
+        Contas = modificar(Contas, nome, senha);
+      }
       break;
 
     default:
