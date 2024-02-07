@@ -2,15 +2,15 @@
 // abcde escreva “acessar tela 2”, e caso nenhum dos dois escreva “Tela
 // inexistente”.
 
-let opcao = prompt("Pergunta");
+let opcao = prompt("Qual o código?");
 switch (opcao) {
-  case "a":
-    alert("primeira opção");
+  case "123":
+    alert("Acessar tela 1.");
     break;
-  case "b":
-    alert("segunda opção");
+  case "abcd":
+    alert("Acessar tela 2.");
     break;
   default:
-    alert("nenhuma obtida");
+    alert("Tela inexistente.");
     break;
 }
