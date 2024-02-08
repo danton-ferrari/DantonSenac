@@ -4,10 +4,10 @@
 // zeros
 
 let quantidadeNotas = parseInt(prompt("Digite a quantidade de notas:"));
-let soma = quantidadeNotas;
+let soma = 0;
 for (let i = 1; i <= quantidadeNotas; i++) {
   let nota = parseFloat(prompt("Digite a nota " + i + ":"));
-  soma += soma + nota;
+  soma = soma + nota;
 }
 let media = soma / quantidadeNotas;
-alert("A média das notas é: " + media.toFixed(5));
+alert("A média das notas é: " + media.toFixed(2));
