@@ -6,15 +6,34 @@
 // Se uma já não for, sorteie se a pessoa vai ou não. Retorne então a
 // resposta.
 
-let opcao = prompt("Pergunta");
+function idade18(nome) {
+  var estuda = prompt(`${nome}, você estuda? (s/n)`).toLocaleLowerCase();
+  var trabalha = prompt(`${nome}, você trabalha? (s/n)`).toLocaleLowerCase();
+  var filhos = prompt(`${nome}, você tem filhos? (s/n)`).toLocaleLowerCase();
+  if (estuda == "s" && trabalha == "s" && filhos == "s") {
+    prompt("Não alistado!");
+  } else if (estuda == "s" || trabalha == "s" || filhos == "s") {
+    var sorteador = Math.floor(Math.random() * 10 + 1);
+    alert(sorteador);
+    alert(sorteador <= 5 ? "Não alistado!" : "Alistado!");
+  } else {
+    alert("Alistado!");
+  }
+}
+
+let nome = prompt("Digite o seu nome:");
+let opcao = Number(prompt("Qual sua idade?"));
 switch (opcao) {
-  case "a":
-    alert("primeira opção");
+  case 18:
+    idade18(nome);
     break;
-  case "b":
-    alert("segunda opção");
+  case 17:
+    alert("Se prepare que ano que vem você vai se alistar!");
+    break;
+  case 19:
+    alert("Se atrasou no alistamento?");
     break;
   default:
-    alert("nenhuma obtida");
+    alert("Não há nada para ser dito!");
     break;
 }
