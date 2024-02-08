@@ -6,14 +6,13 @@ let usuarios = [
   ["Alice", "123"],
   ["Bernardo", "abobora"],
   ["Carol", "senha da carol"],
-  "Murilo",
-  "senha",
+  ["Murilo", "senha"],
 ];
-let nome = Number(prompt("Digite o nome:"));
+let nome = prompt("Digite o nome:");
 let senha = prompt("Digite a senha:");
 let acessoPermitido = false;
 for (let i = 0; i < usuarios.length; i++) {
-  if (usuarios[i][0] == nome && usuarios[1][1] == senha) {
+  if (usuarios[i][0] == nome && usuarios[i][1] == senha) {
     acessoPermitido = true;
     break;
   }
