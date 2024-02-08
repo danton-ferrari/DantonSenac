@@ -6,7 +6,7 @@ let listaCompras = [];
 while (true) {
   var item = prompt(
     "Digite um item para adicionar à lista de compras (ou digite 'sair' para sair):"
-  );
+  ).toLocaleLowerCase();
   if (item == "sair") {
     break;
   } else {
