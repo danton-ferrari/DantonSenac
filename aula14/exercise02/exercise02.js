@@ -3,8 +3,8 @@
 
 let listaVip = ["João", "Maria", "Ana"];
 let nome = prompt("Digite seu nome:");
-if (listaVip.push(nome)) {
-  alert("Bem-vindo à área VIP!");
+if (listaVip.includes(nome)) {
+  alert("Acesso permitido.");
 } else {
-  alert("Acesso negado!");
+  alert("Acesso negado.");
 }
