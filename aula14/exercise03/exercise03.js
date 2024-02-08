@@ -3,16 +3,16 @@
 // erro.
 
 let nomes = [];
-let nome;
+let nome = [];
 while (true) {
   nome = prompt("Digite um nome ou 'sair' para sair:");
-  if (nome.toLowerCase() == sair) {
+  if (nome.toLowerCase() == "sair") {
     break;
   } else {
-    nome.push(nomes);
+    nomes.push(nome);
   }
 }
-if (nomes.length > 0) {
+if (nomes.length <= 0) {
   alert("Nenhum nome foi digitado.");
 } else {
   alert("Lista de nomes:");
