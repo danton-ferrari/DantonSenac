@@ -20,13 +20,13 @@ let temperatura = parseFloat(
 let escala = prompt(
   "Digite a escala da temperatura (C para Celsius, F para Fahrenheit):"
 ).toUpperCase();
-if (escala == "C") {
+if (escala == "F") {
   alert(
     "A temperatura em Fahrenheit é: " +
       fahrenheitParaCelsius(temperatura).toFixed(2) +
       "°F"
   );
-} else if (escala == "F") {
+} else if (escala == "C") {
   alert(
     "A temperatura em Celsius é: " +
       celsiusParaFahrenheit(temperatura).toFixed(2) +
