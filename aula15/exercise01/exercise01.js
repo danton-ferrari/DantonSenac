@@ -29,19 +29,28 @@
 // se a letra é uma vogal, analise se ela não é, se não for, adicione ela à variável nova
 // criada agora.
 
+// let palavra = prompt("Digite uma palavra:").toLowerCase();
+// for (let i = 0; i < palavra.length; i++) {
+//   let letra = palavra.charAt(i);
+//   if (
+//     letra == "a" ||
+//     letra == "e" ||
+//     letra == "i" ||
+//     letra == "o" ||
+//     letra == "u"
+//   ) {
+//     palavra = palavra.replace(letra, "");
+//   }
+// }
+// alert(palavra);
+
+// 3- Caso a letra “a” aparece, escreva ela “o” no lugar dela
+
 let palavra = prompt("Digite uma palavra:").toLowerCase();
 for (let i = 0; i < palavra.length; i++) {
   let letra = palavra.charAt(i);
-  if (
-    letra == "a" ||
-    letra == "e" ||
-    letra == "i" ||
-    letra == "o" ||
-    letra == "u"
-  ) {
-    palavra = palavra.replace(letra, "");
+  if (letra == "a") {
+    palavra = palavra.replace(letra, "o");
   }
 }
 alert(palavra);
-
-// 3- Caso a letra “a” aparece, escreva ela “o” no lugar dela
