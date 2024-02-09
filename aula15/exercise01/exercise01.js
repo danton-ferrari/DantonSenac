@@ -12,13 +12,19 @@ let contadorVogais = 0;
 for (let i = 0; i < palavra.length; i++) {
   let letra = palavra.charAt(i);
   if (
-    letra === "a" ||
-    letra === "e" ||
-    letra === "i" ||
-    letra === "o" ||
-    letra === "u"
+    letra == "b" ||
+    letra == "r" ||
+    letra == "u" ||
+    letra == "n" ||
+    letra == "o"
   ) {
     contadorVogais++;
   }
 }
-alert("A palavra '" + palavra + "' possui " + contadorVogais + " vogais.");
+alert(
+  "A palavra " +
+    palavra +
+    " possui " +
+    contadorVogais +
+    " letras iguais a bruno."
+);
