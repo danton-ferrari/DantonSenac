@@ -18,9 +18,28 @@ class Aluno {
   }
 }
 //Dois exemplos de como criar
-let aluno1 = new Aluno("João", 17, "9A");
-let aluno2 = new Aluno("Maria", 16, "9B");
-aluno1.setAprovado(true);
-aluno2.setAprovado(false);
-console.log(aluno1.getInfo());
-console.log(aluno2.getInfo());
+let lista_alunos = [
+  new Aluno("Danton", 20, "9A"),
+  new Aluno("Marjory", 18, "9B"),
+  new Aluno("Thaís", 12, "9A"),
+  new Aluno("Fernanda", 16, "9B"),
+  new Aluno("Gabriela", 18, "9A"),
+  new Aluno("Jerri", 20, "9B"),
+  new Aluno("Djanice", 20, "9A"),
+  new Aluno("Jairo", 20, "9B"),
+  new Aluno("Thalis", 12, "9A"),
+  new Aluno("Silvania", 13, "9B"),
+  new Aluno("Alberi", 14, "9A"),
+  new Aluno("Diessi", 11, "9B"),
+  new Aluno("Luana", 19, "9A"),
+  new Aluno("Vó", 30, "9B"),
+  new Aluno("Tia", 20, "9A"),
+];
+for (var i = 0; i < lista_alunos.length; i++) {
+  if (i % 2 === 0) {
+    lista_alunos[i].setAprovado(true);
+  } else {
+    lista_alunos[i].setAprovado(false);
+  }
+  console.log(lista_alunos[i].getInfo());
+}
