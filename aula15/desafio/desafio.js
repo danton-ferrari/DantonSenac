@@ -5,14 +5,15 @@ var pressaoA = Math.floor(Math.random() * 100);
 var aguaA = Math.floor(Math.random() * 100);
 var dt = 0.001;
 var da = 0.001;
-var temperatura =
+var temperatura = Number(
   prompt(`Temperatura: ${temperaturaA}°C padrão aleatórtia\n deseja
-mudar?`);
+mudar?`)
+);
 temperatura == "" ? (temperatura = temperaturaA) : true;
 var pressao = prompt(`Pressão: ${pressaoA}% padrão aleatórtia\n deseja mudar?`);
 pressao == "" ? (pressao = pressaoA) : true;
-var agua = prompt(
-  `Nível da água em: ${aguaA}% padrão aleatórtia\n deseja mudar?`
+var agua = Number(
+  prompt(`Nível da água em: ${aguaA}% padrão aleatórtia\n deseja mudar?`)
 );
 agua == "" ? (agua = aguaA) : true;
 while (true) {
