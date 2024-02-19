@@ -7,3 +7,9 @@
 // arranja um emprego, muda de nome pra “Cleber o agricultor”, se ele
 // tiver um emprego já, essa função só escreve, “parabéns Cleber, tu se
 // deu bem”.
+
+let Cleber = {
+  idade: 200,
+  cpf: 293847213,
+  emprego: false,
+};
